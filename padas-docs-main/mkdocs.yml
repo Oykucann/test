@@ -1,0 +1,49 @@
+site_name: PADAS Documentation
+
+plugins:
+  - macros
+
+theme:
+  name: material
+  custom_dir: overrides
+  # features:
+  #   - header.autohide
+
+extra_css:
+  - assets/css/extra.css
+  - assets/css/padas.css
+  - assets/css/padas-utils.css
+  # - assets/css/bootstrap.min.css  
+
+markdown_extensions:
+  - tables
+  - pymdownx.snippets:
+      # Fails the build if any imports are missing
+      #check_paths: true
+      base_path: "snippets"
+  - attr_list
+  - md_in_html
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg  
+
+nav:
+  - index.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/twitter 
+      link: https://twitter.com/padasio
+  generator: false
+  current_version: 0.0.1
+  version:
+    provider: mike
+
+
+copyright: Copyright &copy; 2023 - Padas Inc. All rights reserved.
+
+watch:
+  - "snippets"
