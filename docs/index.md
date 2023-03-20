@@ -2,12 +2,22 @@
 title: Overview
 ---
 
-### TEST TEST 
+--8<-- "overview_mitre.md"
 
 
-<p>&nbsp;</p>
-
-### Quick Links
+---
 
 
+### Required Splunk Apps:
+--8<-- "required_splunk_apps.md"
 
+---
+
+### Setup Instructions:
+--8<-- "setup_instructions.md"
+
+
+---
+
+### Saved Searches
+--8<-- "savedsearches.md"
