@@ -40,9 +40,8 @@ jobs:
 
       - name: Deploy with mike if it is DEV
         if: contains(${{ steps.extract_branch.outputs.branch }}, 'dev')
-        run: |
-          mike deploy --push --update-aliases ${{ steps.extract_branch.outputs.branch }}
-      - name: Deploy with mike
-        if: false == contains(${{ steps.extract_branch.outputs.branch }}, 'dev')        
-        run: |
-          mike deploy --push --update-aliases ${{ steps.extract_branch.outputs.branch }} latest        
+        run: | 
+          if [[${{steps.extract_branch.outputs.branch}}==*"dev"]];then
+              mike deploy --push --update-aliases ${{ steps.extract_branch.outputs.branch }}
+          else
+              mike deploy --push --update-aliases ${{ steps.extract_branch.outputs.branch }} latest      
